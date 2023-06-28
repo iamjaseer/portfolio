@@ -1,0 +1,112 @@
+
+$mediSetSPacing: 1500px;
+$mediSetSPacingMobile: 575px;
+
+.spacing-all-100 {
+    padding: 5.382131324004305vw;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw;
+    }
+}
+
+.spacing-all-250 {
+    padding: 13.455328310010763vw;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw;
+    }
+}
+
+.spacing-50 {
+    padding: 2.6910656620021527vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 5vw 0;
+    }
+}
+
+.spacing-70 {
+    padding: 3.6458333333333335vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+}
+
+.spacing-100 {
+    padding: 5.382131324004305vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+
+    @media only screen and (max-width: $mediSetSPacingMobile) {
+        padding: 50px 0;
+    }
+}
+
+.spacing-150 {
+    padding: 8.073196986006458vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+
+    @media only screen and (max-width: $mediSetSPacingMobile) {
+        padding: 50px 0;
+    }
+}
+
+.spacing-200 {
+    padding: 10.76426264800861vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+
+    @media only screen and (max-width: $mediSetSPacingMobile) {
+        padding: 50px 0;
+    }
+}
+
+.spacing-top-200-bottom-100 {
+    padding: 10.76426264800861vw 0 5.382131324004305vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+
+}
+
+.spacing-250 {
+    padding: 13.455328310010763vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+
+    @media only screen and (max-width: $mediSetSPacingMobile) {
+        padding: 50px 0;
+    }
+}
+
+.spacing-top-250-bottom-100 {
+    padding: 13.455328310010763vw 0 5.382131324004305vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 7vw 0;
+    }
+}
+
+.spacing-300 {
+    padding: 16.146393972012916vw 0;
+
+    @media only screen and (max-width: $mediSetSPacing) {
+        padding: 10vw 0;
+    }
+
+    @media only screen and (max-width: $mediSetSPacingMobile) {
+        padding: 50px 0;
+    }
+}

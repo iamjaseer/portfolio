@@ -1,0 +1,30 @@
+body:not(.dark){
+    .btn{
+        @include Effect;
+        border-radius: 100px !important;
+        background: transparent!important;
+        color: $PC;
+        line-height: 0.5 !important;
+        border:solid 1.5px $PC!important;
+        padding: 20px 26px 20px!important;
+        &:hover, &:focus{
+            background:$PC !important;
+            color:$WHITE!important;
+        }
+    }
+}
+
+
+.btn{
+    @include Effect;
+    border-radius: 100px !important;
+    background: transparent!important;
+    color: $WHITE;
+    line-height: 0.5 !important;
+    border:solid 1.5px $WHITE!important;
+    padding: 20px 26px 20px!important;
+    &:hover, &:focus{
+        background:$WHITE !important;
+        color:$PC!important;
+    }
+}

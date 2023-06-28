@@ -1,0 +1,32 @@
+//HOVER
+@mixin Hover($opacity:1){
+    &:hover, &:focus{
+        opacity: $opacity;
+    }
+}
+
+//EFFECT
+@mixin Effect($speed:0.3s){
+   transition: all $speed;
+}
+
+//POSITION ELEMNT
+@mixin positionElemnt($position, $top, $bottom, $left, $right) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+
+//GAP SET
+@mixin setgap($val) {
+    gap: $val + px;
+
+    @supports not (gap: $val + px) {
+        * {
+            margin-top: $val + px;
+        }
+    }
+}

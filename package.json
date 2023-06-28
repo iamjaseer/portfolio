@@ -1,0 +1,29 @@
+{
+  "name": "iamjaseer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ntegral/react-owl-carousel": "^1.0.1",
+    "axios": "^1.4.0",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "jquery": "^3.7.0",
+    "next": "13.4.6",
+    "react": "18.2.0",
+    "react-animated-cursor": "^2.7.0",
+    "react-cursor-follow": "^2.0.0",
+    "react-dom": "18.2.0",
+    "react-elastic-carousel": "^0.11.5",
+    "react-multi-carousel": "^2.8.4",
+    "react-owl-carousel": "^2.3.3",
+    "react-router-dom": "^6.14.0",
+    "react-sticky": "^6.0.3",
+    "react-sticky-header": "^0.2.0"
+  }
+}

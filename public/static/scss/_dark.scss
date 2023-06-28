@@ -1,0 +1,46 @@
+@import 'typography';
+@import 'colors';
+@import 'mixin';
+@import 'media';
+@import 'spacing';
+@import 'buttons';
+@import 'border';
+
+
+body{
+    background: $WHITE !important;
+    color: $PC !important;
+    *{
+        color: $PC !important;
+    }
+    .sticky{
+        background: $WHITE !important;
+    }
+    }
+
+    
+body.dark{
+background: $PC !important;
+color: $WHITE !important;
+*{
+    color: $WHITE !important;
+}
+.sticky{
+    background: $PC !important;
+}
+.mobile-navigation, #mode-wrapper-2{
+    background: $PC !important;
+}
+#toggle-mode-2 .toggle-border{
+    border: 1px solid $WHITE; 
+}
+#toggle-mode-2 .toggle-indicator::after {
+  
+    background-color: $WHITE; 
+}
+.brand{
+    color: $WHITE !important;
+  }
+}
+
+
