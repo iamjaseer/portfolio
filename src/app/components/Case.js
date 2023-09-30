@@ -1,23 +1,29 @@
 "use client";
 import React from 'react'
 import Link from 'next/link'
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Case(props) {
 
     if (props.type == '1') {
         return (
             <>
-                <div className='case d-grid w-100'>
-                    <Link href={{ pathname: '/case-single', query: { case_id: props.case } }}>
-                        <div className='heading d-sm-flex align-items-end justify-content-between'>
+                <div className='case  w-100'>
+                    {/* <Link href={{ pathname: '/case-single', query: { case_id: props.case } }}> */}
+                    {/* <div className='heading d-sm-flex align-items-end justify-content-between'>
                             <h3 className='title title-5 font-weight-400 text-uppercase'>{props.title}</h3>
                             <p className='text-muted cat'>{props.category}</p>
-                        </div>
-                        <div className='media-wrpr position-relative'>
-                            <img src={props.media} className='d-block w-100' alt={props.title} />
-                        </div>
-                    </Link>
+                        </div> */}
+                    <div className='media-wrpr position-relative pb-2 pt-0'>
+                        <LazyLoadImage src={props.media}
+                            className='d-block w-100'
+                            alt="Image Alt"
+                        />
+
+                        <img src={props.media} className='d-block w-100' alt={props.title} />
+                    </div>
+                    {props.link != '' ? <a href={props.link} className='btn d-inline-block mt-2 mt-md-0' target='_blank'>Visit site</a> : null}
+                    {/* </Link> */}
                 </div>
             </>
         )
@@ -25,16 +31,19 @@ function Case(props) {
     } else if (props.type == '2') {
         return (
             <>
-
                 <div className='case d-grid w-100' data-case={props.category}>
-                    <Link href={{ pathname: '/case-single', query: { case_id: props.case } }}>
-                        <div className='media-wrpr position-relative'>
-                            <img src={props.media} className='d-block w-100' alt={props.title} />
-                        </div>
-                        <div className='heading d-sm-flex align-items-end justify-content-between'>
-                            <p className='mb-0 mt-2'>{props.title}</p>
-                        </div>
-                    </Link>
+                    {/* <Link href={{ pathname: '/case-single', query: { case_id: props.case } }}> */}
+                    <div className='media-wrpr position-relative'>
+                        {/* <h5 className='mb-0 mt-2'>{props.title}</h5> */}
+                        <LazyLoadImage src={props.media}
+                            className='d-block w-100'
+                            alt="Image Alt"
+                        />
+                    </div>
+                    <div className='heading text-center align-items-end justify-content-between'>
+                        {props.link != '' ? <a href={props.link} className='btn d-inline-block mt-2 mt-md-0' target='_blank'>Visit site</a> : null}
+                    </div>
+                    {/* </Link> */}
                 </div>
 
             </>

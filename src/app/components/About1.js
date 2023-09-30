@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const About1 = () => {
 
-  const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+  const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   let api = apiUrl + 'about_1?per_page=1';

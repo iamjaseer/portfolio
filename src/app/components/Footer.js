@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const Footer = () => {
 
-  const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+  const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   let api = apiUrl + 'contact?per_page=1';
@@ -35,7 +35,7 @@ const Footer = () => {
                 </p>
                 <div className='links d-flex align-items-center justify-content-sm-end'>
                   <a href={'mailto:' + post.acf.email}>Mail</a>
-                  <a href={post.acf.linkedin['url']}>LinkedIn</a>
+                  <a href={post.acf.linkedin}>LinkedIn</a>
                   <a href={post.acf.cv}>Read.cv</a>
                 </div>
               </div>

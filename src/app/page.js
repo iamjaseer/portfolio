@@ -11,17 +11,17 @@ export default function Home() {
       {/* HERO START */}
       <Hero />
       {/* HERO END */}
-      {/* SCROLL TEXT START */}
-      <ScrollText />
+       {/* SCROLL TEXT START */}
+       <ScrollText />
       {/* SCROLL TEXT END */}
       {/* CASES START */}
-      <Cases/>
+      {/* <Cases/> */}
       {/* CASES END */}
-      {/* ADDITION TEXT START */}
-      <About1 />
+  {/* ADDITION TEXT START */}
+      {/* <About1 /> */}
       {/* ADDITION TEXT END */}
       {/* BLOG START */}
-      <Blogs type="1"/>
+      {/* <Blogs type="1"/> */}
       {/* BLOGEND */}
       {/* ABOUT START */}
       <About2 />

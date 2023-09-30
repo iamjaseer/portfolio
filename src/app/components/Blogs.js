@@ -9,7 +9,7 @@ import Carousel from 'react-elastic-carousel'
 
 function Blog(props) {
 
-    const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+    const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
     let api = apiUrl + 'blogs?per_page=3&order=asc';
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);

@@ -12,7 +12,7 @@ const BlogSingle = () => {
     const searchParams = useSearchParams()
     const blogid = searchParams.get('blog_id')
 
-    const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+    const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
 
     const [posts, setPosts] = useState([]);
     const [postsMore, setPostsMore] = useState([]);

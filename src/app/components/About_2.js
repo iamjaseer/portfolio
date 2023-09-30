@@ -3,10 +3,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link'
+
 
 const About2 = () => {
 
-    const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+    const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
     let api = apiUrl + 'about_2?per_page=1';
@@ -38,6 +40,7 @@ const About2 = () => {
                                         __html: post.content.rendered,
                                     }}
                                 />
+                                <Link href='/cases' className='btn btn-lg mt-4'>My Works</Link>
                             </div>
                         </div>
                     </div>

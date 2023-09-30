@@ -240,18 +240,38 @@ footer {
 ///////////////////CASE/////////////////////
 .cases {
   ul {
+    list-style: none;
     @media only screen and (min-width: $SM) {
-      @include setgap(150);
+      @include setgap(50);
     }
 
-    @include setgap(100);
+    @include setgap(0);
 
     li {
+
+      @media only screen and (max-width: $MD) {
+       
+        &:first-child{
+          padding-top: 50px;
+        }
+        &:last-child{
+          padding-bottom: 50px;
+          border-bottom: 0;
+        }
+        //border-bottom: solid thin $PC;
+        padding: 24px 0;
+
+     .btn {
+          
+          padding: 18px 20px 19px  !important;
+      }
+       }
+
       .case {
         @include setgap(8);
 
         @media only screen and (min-width: $SM) {
-          max-width: 90%;
+         // max-width: 90%;
         }
 
         .heading {
@@ -297,14 +317,14 @@ footer {
   .case {
     .media-wrpr {
       @include Effect;
-      filter: grayscale(1);
+     // filter: grayscale(1);
 
-      &:after {
-        content: '';
-        @include positionElemnt(absolute, 0, 0, 0, 0);
-        background: #0000004d;
-        z-index: 1;
-      }
+      // &:after {
+      //   content: '';
+      //   @include positionElemnt(absolute, 0, 0, 0, 0);
+      //   background: #0000004d;
+      //   z-index: 1;
+      // }
 
       &:hover {
         filter: grayscale(0);
@@ -730,4 +750,34 @@ border-radius: 3px!important;
 
 .dydPIA{
   margin: 0 !important;
+}
+
+.works-wrpr{
+  gap: 32px;
+  @media only screen and (min-width: $MD) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  display: grid;
+    flex-wrap: wrap;
+   
+    .item{
+      @media only screen and (min-width: $MD) {
+    flex-grow: 1;
+    flex-basis: 40%;
+  
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+  }
+   //background: green;
+    
+  }
+}
+
+@media only screen and (max-width: $MD) {
+.btn-view-more{
+  width: 100%;
+}
 }

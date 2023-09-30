@@ -10,8 +10,9 @@ import Link from 'next/link'
 
 const CaseStudies = () => {
 
+  const [postPerPage, setPostPerPage] = useState(4)
 
-  const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+  const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isActive, setActive] = React.useState(false);
@@ -19,7 +20,7 @@ const CaseStudies = () => {
 
 
   useEffect(() => {
-    let api = apiUrl + 'case_studies?per_page=100'
+    let api = apiUrl + 'case_studies?per_page=100&order=asc'
     setLoading(true)
     axios.get(api)
       .then(res => {
@@ -65,29 +66,21 @@ const CaseStudies = () => {
   return (
     <>
       {/* HERO START */}
-      <section className="hero spacing-100 pb-0 d-grid align-items-end">
+      <section className="spacing-100 pb-0  align-items">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-12 mx-auto">
               <h1 className="title-3">SELECTED CASES</h1>
+              <div className="col-xl-6 mx-auto">
+              <p>Here are a few past client projects and other professional works. I've worked on.</p>
+            </div>
             </div>
           </div>
         </div>
       </section>
       {/* HERO END */}
-      {/* ADDITION TEXT START */}
-      <section className="spacing-100 pt-0 d-grid align-items-end mt-5">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xl-6 mx-auto">
-              <p>Here are a few past client projects and other professional works. I've worked on.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* ADDITION TEXT END */}
       {/* FILTER START */}
-      <section className="spacing-50 pt-0 d-grid align-items-end mt-5">
+      {/* <section className="spacing-50 pt-0 d-grid align-items-end mt-5">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-12 d-flex align-items-center justify-content-center">
@@ -108,10 +101,10 @@ const CaseStudies = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* FILTER END */}
       {/* CASES START */}
-      <section className="spacing-100 d-grid align-items-end mt-5">
+      <section className="spacing-100 d-grid align-items- mt-5">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-12">
@@ -119,7 +112,7 @@ const CaseStudies = () => {
                 <ul className='list-unstyled cases-inner'>
                   {posts.map((post, i) => (
                     <li key={i}>
-                      <Case case={post.id} type='2' title={post.title.rendered} category={post.acf.case_type} media={post.fimg_url} />
+                      <Case case={post.id} type='2' link={post.acf.link} title={post.title.rendered} category={post.acf.case_type} media={post.fimg_url} />
                     </li>
                   ))}
                 </ul>

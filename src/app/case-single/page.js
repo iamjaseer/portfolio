@@ -13,7 +13,7 @@ const CaseSingle = () => {
     const nextCase = searchParams.get('case_id')
     const nextCaseSet = +nextCase + 1
 
-    const apiUrl = 'http://localhost/iamjaseer-api/wp-json/wp/v2/'
+    const apiUrl = 'https://iamjaseer.in/portfolio_jaseer/wp-json/wp/v2/'
     const [posts, setPosts] = useState([])
     const [postsMore, setPostsMore] = useState([])
     const [loading, setLoading] = useState(false)
@@ -107,7 +107,7 @@ const CaseSingle = () => {
                         <div className="container-fluid">
                             <div className="row spacing-50 pt-0">
                                 <div className="col-xl-10 mx-auto">
-                                    <h1 className="title-2 text-uppercase">NEXT CASE</h1>
+                                    <h1 className="title-3 text-uppercase">NEXT CASE</h1>
                                 </div>
                             </div>
                             <Case case={postsMoreData.id} type='3' title={postsMoreData.title.rendered} category={postsMoreData.acf.case_type} media={postsMoreData.fimg_url} />
