@@ -1,5 +1,3 @@
-
-"use client"
 import React, { useState, useRef, useEffect } from 'react';
 import Header from '../app/components/Header'
 import Footer from '../app/components/Footer'
