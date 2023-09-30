@@ -6,36 +6,9 @@ import Brand from './Brand'
 
 function HeaderElemnt() {
   const [isActive, setActive] = React.useState(false);
-  const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
   const headerRef = useRef(null);
 
 
-  //HEADER FIXED
-  const handleScroll = (elTopOffset, elHeight) => {
-    if (window.pageYOffset > (elTopOffset + elHeight)) {
-      setSticky({ isSticky: true, offset: elHeight });
-    } else {
-      setSticky({ isSticky: false, offset: 0 });
-    }
-  };
-
-  // add/remove scroll event listener
-  useEffect(() => {
-    var header = headerRef.current.getBoundingClientRect();
-    const handleScrollEvent = () => {
-      handleScroll(header.top, header.height)
-    }
-
-    window.addEventListener('scroll', handleScrollEvent);
-
-    return () => {
-      window.removeEventListener('scroll', handleScrollEvent);
-    };
-  }, []);
-
-  useEffect(() => {
-    //  document.body.classList.add("light");
-  });
 
 
   const themeSwitch = () => {
@@ -46,7 +19,7 @@ function HeaderElemnt() {
   return (
     <>
 
-      <header className={`header${sticky.isSticky ? ' sticky' : ''}`} ref={headerRef}>
+      <header className="header sticky" ref={headerRef}>
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-12 d-flex align-items-center justify-content-between'>
